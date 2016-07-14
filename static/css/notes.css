@@ -1,0 +1,58 @@
+h1 a {
+    color: #F2A20C;
+    font-family: 'Lobster';
+}
+body {
+    background-image: url('../images/resim.jpg');
+    background-size:90%;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+.page-header {
+    background-color: #09B382;
+    margin-top: 0;
+    padding: 30px 20px 30px 550px;
+}
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #434F4C;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    color: #F26005;
+    font-size: 13pt;
+    margin-left:175px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    float: right;
+    color: #F26005;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #F26005;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 50px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #FCA000;
+}

@@ -1,0 +1,23 @@
+{% extends 'site/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.end_time %}
+            <div class="date">
+                {{ post.end_time }}
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.end_time }}</p>
+
+        <a class="btn btn-default" href="{% url 'note_edit' pk=post.pk %}">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </a>
+
+        <a class="btn btn-default" href="{% url 'delete' pk=post.pk %}">
+          <span class="glyphicon glyphicon-trash"></span>
+        </a>
+
+    </div>
+{% endblock %}

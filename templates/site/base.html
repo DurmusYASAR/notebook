@@ -1,0 +1,40 @@
+{% load i18n staticfiles %}
+<html>
+    <head>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
+      <link rel="stylesheet" href="{% static 'css/notes.css' %}">
+      <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      {{ form.media }}
+      <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+      <script src="{% static 'js/bootstrap.js' %}"></script>
+
+        <title>Notebook</title>
+
+    </head>
+    <body >
+
+    <div class="page-header">
+      {% if user.is_authenticated %}
+    <a href="{% url 'note_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      {% endif %}
+        <h1><a href="/">NOTES</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8 col-sm-offset-3">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+
+</html>
